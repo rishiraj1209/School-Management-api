@@ -1,0 +1,262 @@
+{
+  "info": {
+    "_postman_id": "11bfe52d-1303-4ea1-8fc8-d6b84c8f29be",
+    "name": "School APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "43110385"
+  },
+  "item": [
+    {
+      "name": "add School",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"DAV Public School\",\r\n  \"address\": \"New Delhi\",\r\n  \"latitude\": 28.7061,\r\n  \"longitude\": 77.1005\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/addSchool",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "addSchool"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "add School",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"id\":2,\r\n  \"name\": \"DAV Public School\",\r\n  \"address\": \"New Delhi\",\r\n  \"latitude\": 28.7061,\r\n  \"longitude\": 77.1005\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://school-management-api-1-f8q5.onrender.com/addSchool",
+              "protocol": "https",
+              "host": [
+                "school-management-api-1-f8q5",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "addSchool"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": ":status",
+              "value": 201
+            },
+            {
+              "key": "date",
+              "value": "Sun, 10 May 2026 10:38:17 GMT"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "49"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "content-encoding",
+              "value": "br"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"36-8gGAENweM/gXFauOPftV46Wc5XU\""
+            },
+            {
+              "key": "rndr-id",
+              "value": "7a69da46-8512-49e2"
+            },
+            {
+              "key": "server",
+              "value": "cloudflare"
+            },
+            {
+              "key": "vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "x-render-origin-server",
+              "value": "Render"
+            },
+            {
+              "key": "cf-cache-status",
+              "value": "DYNAMIC"
+            },
+            {
+              "key": "cf-ray",
+              "value": "9f9850409fa86ed4-BOM"
+            },
+            {
+              "key": "alt-svc",
+              "value": "h3=\":443\"; ma=86400"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"School added successfully\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "List Schools",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/listSchools?latitude=28.61&longitude=77.20",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "listSchools"
+          ],
+          "query": [
+            {
+              "key": "latitude",
+              "value": "28.61",
+              "type": "text"
+            },
+            {
+              "key": "longitude",
+              "value": "77.20",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "List Schools",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://school-management-api-1-f8q5.onrender.com/listSchools?latitude=28.61&longitude=77.20",
+              "protocol": "https",
+              "host": [
+                "school-management-api-1-f8q5",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "listSchools"
+              ],
+              "query": [
+                {
+                  "key": "latitude",
+                  "value": "28.61"
+                },
+                {
+                  "key": "longitude",
+                  "value": "77.20"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": ":status",
+              "value": 200
+            },
+            {
+              "key": "date",
+              "value": "Sun, 10 May 2026 10:39:52 GMT"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "146"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "content-encoding",
+              "value": "br"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"10a-eTjcsvo+SgN4TRaq0vJUQupz9qU\""
+            },
+            {
+              "key": "rndr-id",
+              "value": "8d01ddb2-9db1-4a60"
+            },
+            {
+              "key": "server",
+              "value": "cloudflare"
+            },
+            {
+              "key": "vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "x-render-origin-server",
+              "value": "Render"
+            },
+            {
+              "key": "cf-cache-status",
+              "value": "DYNAMIC"
+            },
+            {
+              "key": "cf-ray",
+              "value": "9f98528d8d840b23-BOM"
+            },
+            {
+              "key": "alt-svc",
+              "value": "h3=\":443\"; ma=86400"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"schools\": [\n        {\n            \"id\": 1,\n            \"name\": \"Delhi Public School\",\n            \"adress\": \"New Delhi\",\n            \"latitude\": 28.7041,\n            \"longitude\": 77.1025,\n            \"distance\": \"14.14 km\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"DAV Public School\",\n            \"adress\": \"New Delhi\",\n            \"latitude\": 28.7061,\n            \"longitude\": 77.1005,\n            \"distance\": \"14.44 km\"\n        }\n    ]\n}"
+        }
+      ]
+    }
+  ]
+}
